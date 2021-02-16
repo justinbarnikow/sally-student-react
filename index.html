@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React Hello World</title>
+</head>
+<body>
+
+    <div id="application-root"></div>
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+
+    const bigHeading = {
+      fontSize: '72px',
+      color: 'blue',
+    }
+
+    const noBullets = {
+      listStyleType: 'none'
+    }
+
+    const blueHeadings = {
+      color: 'blue'
+    }
+
+    function App() {
+      return (<div>
+
+        <header>
+          <h1 style={bigHeading}>Sally Student</h1>
+          <img src="ilana.jpg" />
+          <h2>Web Scientist Resume</h2>
+        </header>
+        <main>
+          <section id="education">
+            <h2 style={blueHeadings}>education</h2>
+            <p>Sally is currently in possession of her masters' degree from CIA Santa Barbara and graduated with a GPA of 3.14</p>  
+            <ul style={noBullets} id="education-list">
+              <li><p>Southern Regional High School: Graduated(2017) | GPA: 3.14</p></li>
+              <li><p>CIA Santa Barbara University: Graduated(2019) | GPA: 3.14</p></li>
+              <li><p>Bloc Academy: Graduated(2020) | GPA: 3.14</p></li>
+            </ul>
+          </section>
+          <section id="employment">
+            <h2 style={blueHeadings}>employment history</h2>
+            <ul style={noBullets} id="first-job-list">
+              <li><h3>doogle.com | web scientist secretary</h3></li>
+              <li><p>employment date | 2017-2018</p></li>
+              <li><p>web scientist secretary | receive web scientist calls and direct them to correct department. 
+                answer web science questions, and be the face of the brick and mortar store</p></li>
+            </ul>
+            <ul style={noBullets} id="second-job-list">
+              <li><h3>chasebook.com | web scientist assistant</h3></li>
+              <li><p>employment date | 2018-2020</p></li>
+              <li><p>web scientist assistant | work with an assigned web scientist to learn the practical 
+                every-day jobs completed by a real web scientist. perform all actions under supervision</p></li>
+            </ul>
+          </section>
+          <section id="contact">
+            <h2 style={blueHeadings}>contact</h2>
+            <address id="contact-info">
+              <p>Sally Student, PhD</p>
+              <p>email: <a href="mailto://sallystudent314@stud314.old">sallystudent314@stud314.old</a></p>
+              <p>address: Box 564, Pieland, US</p>
+              <p><a href="tel:+3143143147">+(314)314-3147)</a></p>
+            </address>
+          </section>
+        </main>
+
+      </div>);
+    }
+
+    ReactDOM.render( <App />, document.querySelector('#application-root'));
+
+    </script>
+
+</body>
+</html>
